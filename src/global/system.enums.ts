@@ -27,6 +27,10 @@ export enum status {
   INACTIVE = "INACTIVE",
 }
 
+export enum projectType {
+  PROJECT = "PROJECT",
+  BANNER = "BANNER",
+}
 export enum customerType {
   CLIENT = "CLIENT",
   FEEDBACK = "FEEDBACK",
@@ -64,9 +68,4 @@ export enum projectStatus {
   ONGOING = "ONGOING",
   UPCOMING = "UPCOMING",
   COMPLETED = "COMPLETED",
-}
-
-export enum projectType {
-  RESIDENTIAL = "RESIDENTIAL",
-  COMMERCIAL = "COMMERCIAL",
 }

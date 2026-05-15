@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { status } from "../../global/system.enums";
+import { status, projectType } from "../../global/system.enums";
 import { IsEnum } from "class-validator";
 export class MediaItem {
   @ApiProperty()
@@ -43,6 +43,10 @@ export class availableOptions extends DataType {
 
 export class ProjectDTO {
   id: number;
+
+  @ApiProperty({ enum: projectType })
+  @IsEnum(projectType)
+  type: projectType;
 
   @ApiProperty()
   name: string;

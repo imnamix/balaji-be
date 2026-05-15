@@ -6,52 +6,48 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { MediaItem } from "./homepage.dto";
+import { SlideItem, StatItem } from "./homepage.dto";
 
 @Entity("homepage")
 export class EN_HomePage {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ApiProperty()
-  @Column({ type: "integer", nullable: true, default: null })
-  yearsInServiceCount: number;
+  @ApiProperty({ type: [StatItem] })
+  @Column({ type: "json", nullable: true })
+  stats: { key: string; value: number; icon?: string }[];
 
-  @ApiProperty()
-  @Column({ type: "integer", nullable: true, default: null })
-  customersCount: number;
+  @ApiProperty({ type: [SlideItem] })
+  @Column({ type: "json", nullable: true })
+  slides: { title: string; description: string; image?: string }[];
 
-  @ApiProperty()
-  @Column({ type: "integer", nullable: true, default: null })
-  projectsCount: number;
-
-  @ApiProperty()
-  @Column({ type: "integer", nullable: true, default: null })
-  teamWorkersCount: number;
-
-  @ApiProperty()
-  @Column({ type: "json" })
-  media: MediaItem[];
-
-  @ApiProperty()
-  @Column({ type: "varchar", length: 500, nullable: true, default: null })
-  bannerTitle: string;
-
-  @ApiProperty()
-  @Column({ type: "text", nullable: true, default: null })
-  bannerDescription: string;
-
-  @ApiProperty()
-  @Column({ type: "varchar", length: 500, nullable: true, default: null })
-  contactus_bg_image: string;
-  
   @ApiProperty()
   @Column({ type: "varchar", length: 500, nullable: true, default: null })
   footer_bg_image: string;
 
   @ApiProperty()
   @Column({ type: "varchar", length: 500, nullable: true, default: null })
-  mobile_banner_image: string;
+  contactus_bg_image: string;
+
+  @ApiProperty()
+  @Column({ type: "varchar", length: 500, nullable: true, default: null })
+  aboutus_bg_image: string;
+
+  @ApiProperty()
+  @Column({ type: "varchar", length: 500, nullable: true, default: null })
+  services_bg_image: string;
+
+  @ApiProperty()
+  @Column({ type: "varchar", length: 500, nullable: true, default: null })
+  projects_bg_image: string;
+
+  @ApiProperty()
+  @Column({ type: "varchar", length: 500, nullable: true, default: null })
+  events_bg_image: string;
+
+  @ApiProperty()
+  @Column({ type: "varchar", length: 500, nullable: true, default: null })
+  home_contact_bg_image: string;
 
   @ApiProperty()
   @CreateDateColumn({ type: "datetime" })

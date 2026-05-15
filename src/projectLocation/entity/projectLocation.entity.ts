@@ -36,7 +36,7 @@ export class EN_ProjectLocation {
   projectStatus: projectStatus;
 
   @ApiProperty()
-  @Column({ nullable: true, default: projectType.RESIDENTIAL })
+  @Column({ nullable: true, default: projectType.PROJECT })
   projectType: projectType;
 
   @ApiProperty()

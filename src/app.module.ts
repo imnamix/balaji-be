@@ -42,7 +42,7 @@ require("dotenv").config();
       // Entities
       entities: [__dirname + "/**/*.entity{.ts,.js}"],
       // Auto sync (disable in production if possible)
-      synchronize: process.env.NODE_ENV !== "production",
+      synchronize: true,
       // Connection pooling - CRITICAL FOR PERFORMANCE
       poolSize: 20,
       maxQueryExecutionTime: 60000, // 60 seconds timeout

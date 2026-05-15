@@ -1,7 +1,8 @@
-import { status } from "../../global/system.enums";
+import { status, projectType } from "../../global/system.enums";
 import { availableOptions, DataType, MediaItem, projectWalkthrough } from "./project.dto";
 export declare class EN_Project {
     id: number;
+    type: projectType;
     name: string;
     reraId: string;
     headline: string;

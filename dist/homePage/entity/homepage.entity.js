@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.EN_HomePage = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const typeorm_1 = require("typeorm");
+const homepage_dto_1 = require("./homepage.dto");
 let EN_HomePage = class EN_HomePage {
 };
 exports.EN_HomePage = EN_HomePage;
@@ -20,45 +21,15 @@ __decorate([
     __metadata("design:type", Number)
 ], EN_HomePage.prototype, "id", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "integer", nullable: true, default: null }),
-    __metadata("design:type", Number)
-], EN_HomePage.prototype, "yearsInServiceCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "integer", nullable: true, default: null }),
-    __metadata("design:type", Number)
-], EN_HomePage.prototype, "customersCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "integer", nullable: true, default: null }),
-    __metadata("design:type", Number)
-], EN_HomePage.prototype, "projectsCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "integer", nullable: true, default: null }),
-    __metadata("design:type", Number)
-], EN_HomePage.prototype, "teamWorkersCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "json" }),
+    (0, swagger_1.ApiProperty)({ type: [homepage_dto_1.StatItem] }),
+    (0, typeorm_1.Column)({ type: "json", nullable: true }),
     __metadata("design:type", Array)
-], EN_HomePage.prototype, "media", void 0);
+], EN_HomePage.prototype, "stats", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
-    __metadata("design:type", String)
-], EN_HomePage.prototype, "bannerTitle", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "text", nullable: true, default: null }),
-    __metadata("design:type", String)
-], EN_HomePage.prototype, "bannerDescription", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
-    __metadata("design:type", String)
-], EN_HomePage.prototype, "contactus_bg_image", void 0);
+    (0, swagger_1.ApiProperty)({ type: [homepage_dto_1.SlideItem] }),
+    (0, typeorm_1.Column)({ type: "json", nullable: true }),
+    __metadata("design:type", Array)
+], EN_HomePage.prototype, "slides", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
@@ -68,7 +39,32 @@ __decorate([
     (0, swagger_1.ApiProperty)(),
     (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
     __metadata("design:type", String)
-], EN_HomePage.prototype, "mobile_banner_image", void 0);
+], EN_HomePage.prototype, "contactus_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
+    __metadata("design:type", String)
+], EN_HomePage.prototype, "aboutus_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
+    __metadata("design:type", String)
+], EN_HomePage.prototype, "services_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
+    __metadata("design:type", String)
+], EN_HomePage.prototype, "projects_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
+    __metadata("design:type", String)
+], EN_HomePage.prototype, "events_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 500, nullable: true, default: null }),
+    __metadata("design:type", String)
+], EN_HomePage.prototype, "home_contact_bg_image", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     (0, typeorm_1.CreateDateColumn)({ type: "datetime" }),

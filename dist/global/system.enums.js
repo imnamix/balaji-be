@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.projectType = exports.projectStatus = exports.MODULE = exports.eventType = exports.formType = exports.achievementType = exports.customerType = exports.status = exports.productType = exports.permissions = exports.gender = exports.userRoles = void 0;
+exports.projectStatus = exports.MODULE = exports.eventType = exports.formType = exports.achievementType = exports.customerType = exports.projectType = exports.status = exports.productType = exports.permissions = exports.gender = exports.userRoles = void 0;
 var userRoles;
 (function (userRoles) {
     userRoles["SUPER_ADMIN"] = "SUPER_ADMIN";
@@ -30,6 +30,11 @@ var status;
     status["ACTIVE"] = "ACTIVE";
     status["INACTIVE"] = "INACTIVE";
 })(status || (exports.status = status = {}));
+var projectType;
+(function (projectType) {
+    projectType["PROJECT"] = "PROJECT";
+    projectType["BANNER"] = "BANNER";
+})(projectType || (exports.projectType = projectType = {}));
 var customerType;
 (function (customerType) {
     customerType["CLIENT"] = "CLIENT";
@@ -69,9 +74,4 @@ var projectStatus;
     projectStatus["UPCOMING"] = "UPCOMING";
     projectStatus["COMPLETED"] = "COMPLETED";
 })(projectStatus || (exports.projectStatus = projectStatus = {}));
-var projectType;
-(function (projectType) {
-    projectType["RESIDENTIAL"] = "RESIDENTIAL";
-    projectType["COMMERCIAL"] = "COMMERCIAL";
-})(projectType || (exports.projectType = projectType = {}));
 //# sourceMappingURL=system.enums.js.map

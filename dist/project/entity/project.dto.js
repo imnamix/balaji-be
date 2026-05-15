@@ -72,6 +72,11 @@ class ProjectDTO {
 }
 exports.ProjectDTO = ProjectDTO;
 __decorate([
+    (0, swagger_1.ApiProperty)({ enum: system_enums_1.projectType }),
+    (0, class_validator_1.IsEnum)(system_enums_1.projectType),
+    __metadata("design:type", String)
+], ProjectDTO.prototype, "type", void 0);
+__decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], ProjectDTO.prototype, "name", void 0);

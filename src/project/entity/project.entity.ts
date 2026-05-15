@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { status } from "../../global/system.enums";
+import { status, projectType } from "../../global/system.enums";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   availableOptions,
@@ -18,6 +18,10 @@ import {
 export class EN_Project {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @ApiProperty({ enum: projectType, default: projectType.PROJECT })
+  @Column({ type: "enum", enum: projectType, default: projectType.PROJECT })
+  type: projectType;
 
   @ApiProperty()
   @Column({ type: "varchar", length: 1000, nullable: true, default: null })

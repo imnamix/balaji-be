@@ -48,7 +48,7 @@ __decorate([
 ], EN_ProjectLocation.prototype, "projectStatus", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
-    (0, typeorm_1.Column)({ nullable: true, default: system_enums_1.projectType.RESIDENTIAL }),
+    (0, typeorm_1.Column)({ nullable: true, default: system_enums_1.projectType.PROJECT }),
     __metadata("design:type", String)
 ], EN_ProjectLocation.prototype, "projectType", void 0);
 __decorate([

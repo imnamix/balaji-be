@@ -1,4 +1,4 @@
-import { status } from "../../global/system.enums";
+import { status, projectType } from "../../global/system.enums";
 export declare class MediaItem {
     media_url: string;
     media_type: string;
@@ -21,6 +21,7 @@ export declare class availableOptions extends DataType {
 }
 export declare class ProjectDTO {
     id: number;
+    type: projectType;
     name: string;
     reraId: string;
     headline: string;

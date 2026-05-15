@@ -9,54 +9,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HomePageDTO = exports.MediaItem = void 0;
+exports.HomePageDTO = exports.StatItem = exports.SlideItem = void 0;
 const swagger_1 = require("@nestjs/swagger");
-class MediaItem {
+class SlideItem {
 }
-exports.MediaItem = MediaItem;
+exports.SlideItem = SlideItem;
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
-], MediaItem.prototype, "media_url", void 0);
+], SlideItem.prototype, "title", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
-], MediaItem.prototype, "media_type", void 0);
+], SlideItem.prototype, "description", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], SlideItem.prototype, "image", void 0);
+class StatItem {
+}
+exports.StatItem = StatItem;
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    __metadata("design:type", String)
+], StatItem.prototype, "key", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)(),
+    __metadata("design:type", Number)
+], StatItem.prototype, "value", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], StatItem.prototype, "icon", void 0);
 class HomePageDTO {
 }
 exports.HomePageDTO = HomePageDTO;
 __decorate([
-    (0, swagger_1.ApiProperty)(),
-    __metadata("design:type", Number)
-], HomePageDTO.prototype, "yearsInServiceCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    __metadata("design:type", Number)
-], HomePageDTO.prototype, "customersCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    __metadata("design:type", Number)
-], HomePageDTO.prototype, "projectsCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    __metadata("design:type", Number)
-], HomePageDTO.prototype, "teamWorkersCount", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)({ type: [MediaItem] }),
+    (0, swagger_1.ApiProperty)({ type: [StatItem] }),
     __metadata("design:type", Array)
-], HomePageDTO.prototype, "media", void 0);
+], HomePageDTO.prototype, "stats", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ required: false }),
-    __metadata("design:type", String)
-], HomePageDTO.prototype, "bannerTitle", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)({ required: false }),
-    __metadata("design:type", String)
-], HomePageDTO.prototype, "bannerDescription", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)({ required: false }),
-    __metadata("design:type", String)
-], HomePageDTO.prototype, "contactus_bg_image", void 0);
+    (0, swagger_1.ApiProperty)({ type: [SlideItem] }),
+    __metadata("design:type", Array)
+], HomePageDTO.prototype, "slides", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)({ required: false }),
     __metadata("design:type", String)
@@ -64,7 +59,27 @@ __decorate([
 __decorate([
     (0, swagger_1.ApiProperty)({ required: false }),
     __metadata("design:type", String)
-], HomePageDTO.prototype, "mobile_banner_image", void 0);
+], HomePageDTO.prototype, "contactus_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], HomePageDTO.prototype, "aboutus_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], HomePageDTO.prototype, "services_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], HomePageDTO.prototype, "projects_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], HomePageDTO.prototype, "events_bg_image", void 0);
+__decorate([
+    (0, swagger_1.ApiProperty)({ required: false }),
+    __metadata("design:type", String)
+], HomePageDTO.prototype, "home_contact_bg_image", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", Number)

@@ -21,6 +21,11 @@ __decorate([
     __metadata("design:type", Number)
 ], EN_Project.prototype, "id", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({ enum: system_enums_1.projectType, default: system_enums_1.projectType.PROJECT }),
+    (0, typeorm_1.Column)({ type: "enum", enum: system_enums_1.projectType, default: system_enums_1.projectType.PROJECT }),
+    __metadata("design:type", String)
+], EN_Project.prototype, "type", void 0);
+__decorate([
     (0, swagger_1.ApiProperty)(),
     (0, typeorm_1.Column)({ type: "varchar", length: 1000, nullable: true, default: null }),
     __metadata("design:type", String)
