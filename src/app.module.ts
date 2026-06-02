@@ -24,7 +24,7 @@ import { ContactInfoModule } from "./contactInfo/contact-info.module";
 import { PlanCategoryModule } from "./plancategory/planCategory.module";
 import { PlanModule } from "./plan/plan.module";
 import { WorkIndustryModule } from "./workIndustry/workIndustry.module";
-
+import { FundedProjectsModule } from "./fundedProjects/fundedProjects.module";
 require("dotenv").config();
 
 @Module({
@@ -53,7 +53,8 @@ require("dotenv").config();
         duration: 300000, // 5 minutes cache
       },
       // Logging - disable for production
-      logging: process.env.NODE_ENV !== "production" ? ["error", "warn"] : false,
+      logging:
+        process.env.NODE_ENV !== "production" ? ["error", "warn"] : false,
       // Required for TiDB Cloud / secure MySQL connections
       ssl: {
         rejectUnauthorized: false,
@@ -67,7 +68,7 @@ require("dotenv").config();
       transport: {
         host: "smtp.yandex.com",
         port: 465,
-        secure: true, 
+        secure: true,
         auth: {
           user: COMMUNICATION_MAIL_CONSTANT.EMAIL,
           pass: COMMUNICATION_MAIL_CONSTANT.PASSWORD,
@@ -95,6 +96,7 @@ require("dotenv").config();
     PlanCategoryModule,
     PlanModule,
     WorkIndustryModule,
+    FundedProjectsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
