@@ -33,6 +33,7 @@ const contact_info_module_1 = require("./contactInfo/contact-info.module");
 const planCategory_module_1 = require("./plancategory/planCategory.module");
 const plan_module_1 = require("./plan/plan.module");
 const workIndustry_module_1 = require("./workIndustry/workIndustry.module");
+const fundedProjects_module_1 = require("./fundedProjects/fundedProjects.module");
 require("dotenv").config();
 let AppModule = class AppModule {
 };
@@ -94,6 +95,7 @@ exports.AppModule = AppModule = __decorate([
             planCategory_module_1.PlanCategoryModule,
             plan_module_1.PlanModule,
             workIndustry_module_1.WorkIndustryModule,
+            fundedProjects_module_1.FundedProjectsModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
